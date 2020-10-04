@@ -13,6 +13,7 @@ print(d)
 e = dict({'A': -1, 'Z': 1})
 print(a == b == c == d == e)
 
+ed = {**e, **d}  # merge two dicts
 # is = whether objects have the same id, not only the value
 print(list(zip(['h', 'e', 'l', 'l', 'o'], range(5))))
 f = dict(list(zip(['h', 'e', 'l', 'l', 'o'], range(5))))
@@ -31,7 +32,7 @@ except KeyError:
 f.update({'another': 'value'})
 f.update(a=1)
 print(f)
-d.get('a')  # the same as d['a'] but if the key is missing, no KeyError
+d.get('a')  # the same as d['a'] but if the key is missing, no KeyError, returns None instead.
 d.get('a', 177)  # default value is returned if the key is missing
 print(d.get('b', 177))  # like this
 
